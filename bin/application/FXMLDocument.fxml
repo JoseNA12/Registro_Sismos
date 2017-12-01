@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="1083.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FXMLDocumentController">
+   <children>
+      <Label layoutX="767.0" layoutY="55.0" prefHeight="19.0" prefWidth="152.0" text="-Localización geográfica:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Separator layoutX="713.0" layoutY="48.0" orientation="VERTICAL" prefHeight="440.0" prefWidth="54.0" />
+      <Button fx:id="button_ActualizarInfo" layoutX="449.0" layoutY="562.0" mnemonicParsing="false" onAction="#mostrarVentanaActualizarInformacion" prefHeight="25.0" prefWidth="152.0" text="Actualizar información" />
+      <TextArea fx:id="text_Descripcion" editable="false" layoutX="375.0" layoutY="379.0" prefHeight="152.0" prefWidth="301.0" wrapText="true" />
+      <Label fx:id="label_DetalleSismo" layoutX="338.0" layoutY="48.0" prefHeight="33.0" prefWidth="121.0" text="-Detalles del sismo:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <GridPane layoutX="358.0" layoutY="99.0" prefHeight="266.0" prefWidth="333.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="106.0" text="• Fecha:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label prefHeight="17.0" prefWidth="81.0" text="• Hora:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label prefHeight="17.0" prefWidth="143.0" text="• Profundidad:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label prefHeight="17.0" prefWidth="100.0" text="• Origen:" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label prefHeight="17.0" prefWidth="112.0" text="• Magnitud:" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label prefHeight="17.0" prefWidth="187.0" text="• Latitud:" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label prefHeight="17.0" prefWidth="114.0" text="• Provincia/zona:" GridPane.rowIndex="7">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label prefHeight="17.0" prefWidth="136.0" text=" - Descripcion:" GridPane.rowIndex="8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="TextField_Fecha" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="TextField_Hora" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="TextField_Profundidad" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="TextField_Origen" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="TextField_Magnitud" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="TextField_Latitud" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="TextField_Longitud" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="TextField_Zona" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label text="• Longitud:" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.0" minWidth="10.0" prefWidth="184.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Separator layoutX="296.0" layoutY="48.0" orientation="VERTICAL" prefHeight="539.0" prefWidth="54.0" />
+      <MenuBar fx:id="menuBarra" layoutX="38.0" layoutY="14.0" prefHeight="25.0" prefWidth="1022.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Archivo">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarVentanaRegistrarSismo" text="Registrar sismo" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarVentanaAnalisisTabular" text="Analisis de los sismos registrados" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edición">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarVentanaServicioNotificacion" text="Importar servicio de notificaciones" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Información">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Acerca de.." />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <TableView id="ListaSismos" fx:id="tableView_Sismos" layoutX="38.0" layoutY="48.0" prefHeight="539.0" prefWidth="258.0">
+         <columns>
+            <TableColumn fx:id="tableColum_Sismo" prefWidth="160.0" resizable="false" text="Sismos" />
+            <TableColumn fx:id="tableColum_Fecha" prefWidth="97.0" text="Fecha" />
+         </columns>
+      </TableView>
+      <ImageView fx:id="image_MapaSismo" fitHeight="335.0" fitWidth="284.0" layoutX="772.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="label_MensajeActualizar" layoutX="770.0" layoutY="545.0" prefHeight="17.0" prefWidth="258.0" textFill="RED" />
+      <CheckBox fx:id="check_EsMaritimo" layoutX="871.0" layoutY="464.0" mnemonicParsing="false" text="Marítimo" />
+      <Separator layoutX="770.0" layoutY="505.0" prefHeight="33.0" prefWidth="278.0" />
+      <Label layoutX="853.0" layoutY="456.0" prefHeight="33.0" prefWidth="106.0" />
+   </children>
+</AnchorPane>

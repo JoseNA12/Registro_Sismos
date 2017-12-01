@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="507.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="registro.FXMLRegistroController">
+   <children>
+      <Separator layoutX="36.0" layoutY="65.0" prefHeight="40.0" prefWidth="704.0" />
+      <Label layoutX="162.0" layoutY="45.0" text="Por favor, complete todos los campos disponibles para registrar el sismo:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="77.0" layoutY="116.0" prefHeight="268.0" prefWidth="393.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="167.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="55.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="172.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Fecha:" />
+            <Label text="Instante ocurrido (hh/mm/ss):" GridPane.rowIndex="2" />
+            <Label text="Profundidad (Km):" GridPane.rowIndex="4" />
+            <TextField fx:id="entry_Fecha" prefHeight="12.0" prefWidth="183.0" GridPane.rowIndex="1" />
+            <TextField fx:id="entry_Instante" GridPane.rowIndex="3" />
+            <TextField fx:id="entry_Profundidad" GridPane.rowIndex="5" />
+            <Label text="Origen:" GridPane.rowIndex="6" />
+            <TextField fx:id="entry_Origen" GridPane.rowIndex="7" />
+            <Label text="Magnitud:" GridPane.columnIndex="2" />
+            <Label text="Latitud:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label text="Longitud:" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Label text="Provincia:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="entry_Magnitud" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="entry_Latitud" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField fx:id="entry_Longitud" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <TextField fx:id="entry_Provincia" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <TextArea fx:id="entry_Descripcion" layoutX="521.0" layoutY="154.0" prefHeight="227.0" prefWidth="184.0" />
+      <Label layoutX="519.0" layoutY="127.0" text="Descripcion:" />
+      <Button fx:id="button_RegistrarSismo" layoutX="356.0" layoutY="428.0" mnemonicParsing="false" text="Registrar" />
+   </children>
+</AnchorPane>

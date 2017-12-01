@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="523.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="actualizar.FXMLActualizarController">
+   <children>
+      <GridPane layoutX="59.0" layoutY="94.0" prefHeight="268.0" prefWidth="393.0">
+         <children>
+            <Label text="Fecha:" />
+            <Label text="Instante ocurrido (hh/mm/ss):" GridPane.rowIndex="2" />
+            <Label text="Profundidad (Km):" GridPane.rowIndex="4" />
+            <TextField fx:id="entry_FechaAct" prefHeight="12.0" prefWidth="183.0" GridPane.rowIndex="1" />
+            <TextField fx:id="entry_InstanteAct" GridPane.rowIndex="3" />
+            <TextField fx:id="entry_ProfundidadAct" GridPane.rowIndex="5" />
+            <Label text="Origen:" GridPane.rowIndex="6" />
+            <TextField fx:id="entry_OrigenAct" GridPane.rowIndex="7" />
+            <Label text="Magnitud:" GridPane.columnIndex="2" />
+            <Label text="Latitud:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label text="Longitud:" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Label text="Provincia:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="entry_MagnitudAct" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="entry_LatitudAct" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField fx:id="entry_LongitudAct" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <TextField fx:id="entry_ProvinciaAct" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="167.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="55.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="172.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Separator layoutX="59.0" layoutY="58.0" prefHeight="17.0" prefWidth="630.0" />
+      <Label layoutX="505.0" layoutY="100.0" text="Descripcion:" />
+      <TextArea fx:id="entry_DescripcionAct" layoutX="505.0" layoutY="130.0" prefHeight="227.0" prefWidth="184.0" wrapText="true" />
+      <ToolBar layoutX="57.0" layoutY="16.0" prefHeight="36.0" prefWidth="630.0">
+         <items>
+            <Label text="Actualizar Información:  ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_idSismo" prefHeight="19.0" prefWidth="262.0">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+            </Label>
+         </items>
+      </ToolBar>
+      <Button fx:id="button_Actualizar" layoutX="257.0" layoutY="452.0" mnemonicParsing="false" onAction="#modificarInformacionSismo" prefHeight="25.0" prefWidth="80.0" text="Actualizar" />
+      <Button fx:id="button_Aceptar" layoutX="409.0" layoutY="452.0" mnemonicParsing="false" onAction="#ocultarVentana" prefHeight="25.0" prefWidth="80.0" text="Aceptar" />
+      <Separator layoutX="59.0" layoutY="420.0" prefHeight="8.0" prefWidth="630.0" />
+      <Label fx:id="label_MensajeAviso" layoutX="59.0" layoutY="392.0" prefHeight="17.0" prefWidth="630.0" textFill="RED" />
+      <Label fx:id="label_MensajeRegistrado" layoutX="59.0" layoutY="392.0" prefHeight="17.0" prefWidth="630.0" />
+   </children>
+</AnchorPane>
